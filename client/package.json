@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/Hamza-160804/Portfolio.git",
   "name": "client",
   "version": "0.1.0",
   "private": true,
@@ -41,7 +42,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "npx tailwindcss build src/input.css -o src/output.css",
-    "start:css": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "start:css": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build" 
   },
   "eslintConfig": {
     "extends": [
