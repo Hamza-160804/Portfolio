@@ -1,15 +1,19 @@
 {
+    "homepage": "https://github.com/Hamza-160804/Portfolio.git",
     "name": "portfolio",
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "start": "npm run dev",
-        "dev": "concurrently \"npm run server\" \"npm run client\"",
-        "server": "cd server && npm start",
-        "client": "cd client && npm start"
+      "start": "concurrently \"npm run server\" \"npm run client\"",
+      "server": "cd server && npm start",
+      "client": "cd client && npm start",
+      "build": "npm run build:client",
+      "build:client": "cd client && npm install && npm run build",
+      "build:server": "cd server && npm install",
+      "deploy": "echo 'Deployment script needed for full-stack hosting'"
     },
     "devDependencies": {
-        "concurrently": "^8.2.0",
-        "gh-pages": "^6.3.0"
+      "concurrently": "^9.1.2"
     }
-}
+  }
+  
