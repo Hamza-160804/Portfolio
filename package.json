@@ -13,6 +13,7 @@
         "deploy": "echo 'Deployment script needed for full-stack hosting'"
     },
     "devDependencies": {
-        "concurrently": "^9.1.2"
+        "concurrently": "^9.1.2",
+        "gh-pages": "^6.3.0"
     }
 }
