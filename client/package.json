@@ -1,6 +1,6 @@
 {
   "homepage": "https://github.com/Hamza-160804/Portfolio.git",
-  "name": "client",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,16 +12,12 @@
     "aos": "^2.3.4",
     "axios": "^1.7.9",
     "body-parser": "^1.20.3",
-    "cors": "^2.8.5",
     "cra-template": "1.2.0",
     "dotenv": "^16.4.7",
+    "emailjs": "^4.0.3",
     "emailjs-com": "^3.2.0",
-    "express": "^4.21.2",
     "framer-motion": "^12.0.5",
     "lucide-react": "^0.474.0",
-    "mongodb": "^6.12.0",
-    "mongoose": "^8.9.5",
-    "nodemailer": "^6.10.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-error-boundary": "^5.0.0",
@@ -38,13 +34,13 @@
   },
   "scripts": {
     "start": "react-scripts start",
-  "build": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+    "build": "set NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:css": "npx tailwindcss build src/input.css -o src/output.css",
     "start:css": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build" 
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
