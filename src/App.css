@@ -1,0 +1,146 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+.App {
+  text-align: center;
+  background-color: #000B2A;
+}
+.about-me{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 100vh;
+  gap: 20px;
+}
+.about-me-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 30px;
+  color: white;
+  background-color: #320F85;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Syne', sans-serif;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 365px;
+  border-radius: 20px;
+}
+.about-me-button:hover{
+  background-color: #2D5FB6;
+}
+.view-details-button{
+  margin-top: 20px;
+  margin-left: 200px;
+  transition: all 0.3s ease;
+  transform: scale(1);
+  border-radius: 10px;
+  border: 1px solid #2D5FB6;
+  font-size: medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  hover{scale: 1.1};
+}
+.view-details-button:hover{
+  background-color: #2D5FB6;
+}
+.about-me-button-details{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-left: 20px;
+  margin-left: 155px;
+}
+.introduction{
+  background-color: #000B2A;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 20px 30px;
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .introduction{
+    flex-direction: column;
+  }
+  .about-me-button{
+    margin-left: 300px;
+  }
+  .about-me-button-details{
+    margin-left: 96px;
+  }
+  .view-details-button{
+    margin-left: 100px;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .introduction{
+    flex-direction: column;
+  }
+  .about-me{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+  .about-me-button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 150px ;
+  }
+  .view-details-button{
+    margin-left: 60px;
+  }
+  .about-me-button-details{
+    margin-left: 245px;
+  }
+}
+@media (min-width: 320px) and (max-width: 425px) {
+  .introduction{
+    flex-direction: column;
+  }
+ .image-container{
+  display: grid;
+    grid-template-columns: auto;
+    gap: inherit; 
+ }
+  .about-me{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .about-me-button-details{
+    margin-left: 77px;;
+  }
+  .view-details-button{
+    margin-left: 80px;
+  }
+  .intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-me-button{
+    margin-left: auto;
+  }
+  .touch{
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .send{
+    margin-left: 85px;
+  }
+  .testimonial-content{
+    margin-left: -32px;
+  }
+}
