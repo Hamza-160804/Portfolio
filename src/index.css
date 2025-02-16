@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-color: #2D5FB6 #000B2A;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.home {
+  width: 90px;
+  height: 40px;
+  background-color: transparent;
+  text-align: center;
+  line-height: 35px;
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.home span {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  transform: translateY(0);
+  transition: transform 0.4s ease;
+}
+
+.home span.new {
+  transform: translateY(100%); 
+}
+
+.home span.initial {
+  transform: translateY(0);
+}
+
+
+.home:hover span.initial {
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
+}
+
+.home:hover span.new {
+  transform: translateY(0);
+  transition: transform 0.4s ease;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  text-decoration: none;
+  width: 2.625rem;
+  height: 2.625rem;
+  border-radius: 14px;
+  background-color: hsla(209 20% 70% / 20%); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.icon > i {
+  color: #2D5FB6;
+  font-size: 1.5rem;
+  transition: all 0.2s;
+}
+
+.icon:hover > i {
+  scale: 1.2;
+  color: #f1f1f1;
+}
+
+.icon:before {
+  background: var(--color);
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 130%;
+  left: -110%;
+  top: 80%;
+  transform: rotate(45deg);
+}
+
+.icon:hover:before {
+  animation: slide 0.7s forwards;
+}
+
+@keyframes slide {
+  50% {
+    left: 10%;
+    top: -40%;
+  }
+
+  100% {
+    left: -15%;
+    top: -15%;
+  }
+}
+
+.icon:has(.fa-instagram) {
+  --color: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+}
+.icon:has(.fa-linkedin-in) {
+  --color: #038ad3;
+}
+.icon:has(.fa-facebook) {
+  --color: #003cff;
+}
+.icon:has(.fa-github) {
+  --color: #333;
+}
+
+@keyframes typing {
+  0% {
+      width: 0;
+  }
+  50% {
+      width: 85%;
+  }
+  100% {
+      width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+      border-color: transparent;
+  }
+}
+
+.heading-1 {
+  display: inline-flex;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid white; /* Simulates blinking cursor */
+  width: 0;
+  animation: typing 5s steps(20, end) infinite, blink 0.8s infinite;
+}
+
+/* Scrollbar for WebKit Browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #000B2A; /* Track (background) color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8b5cf6; /* Scrollbar handle color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6d28d9; /* Darker color on hover */
+}
+/* Global Styles */
+.home-container {
+  background: #000B2A;
+  color: white;
+  font-family: 'Syne', sans-serif;
+  padding: 0 16px;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 50px 0;
+}
+
+/* Testimonial Section */
+.testimonial {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.testimonial-content {
+  padding: 30px;
+  border-radius: 10px;
+  display: inline-block;
+  max-width: 600px;
+  margin-top: 20px;
+}
+.comma-1{
+  position: absolute;
+  top: -90px;
+  left: -50px;
+  color: #2D5FB6;
+  font-size: 9rem;
+}
+.comma-2{
+  position: absolute;
+  bottom: -90px;
+  right: -50px;
+  color: #2D5FB6;
+  font-size: 9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 425px) {
+  .testimonial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* font-weight: 200;
+    font-size: small; */
+  }
+  .comma-1{
+    display: none;
+  }
+  .comma-2{
+    display: none;
+  }
+  .testimonial-content p{
+    font-size: 14px;
+    padding: 5px 5px;
+}
+}

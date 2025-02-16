@@ -1,0 +1,39 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000B2A;
+    gap: 10px;
+  }
+  
+  .dot {
+    width: 15px;
+    height: 15px;
+    background-color: #2D5FB6;
+    border-radius: 50%;
+    animation: upDown 0.5s ease-in-out infinite alternate;
+  }
+  
+  .dot1 {
+    animation-delay: 0s;
+  }
+  .dot2 {
+    animation-delay: 0.2s;
+  }
+  .dot3 {
+    animation-delay: 0.4s;
+  }
+  .dot4 {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes upDown {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-20px);
+    }
+  }
+  
