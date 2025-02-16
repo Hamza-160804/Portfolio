@@ -10,13 +10,13 @@ const ContactForm = () => {
   const sendEmail = async (e) => {
     e.preventDefault();
     const formData = new FormData(form.current);
-    const user_name = formData.get("user_name");
-    const user_email = formData.get("user_email");
-    const user_contact = formData.get("user_contact");
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const contact = formData.get("contact");
     const subject = formData.get("subject");
     const message = formData.get("message");
 
-    if (!user_name || !user_email || !user_contact || !subject || !message) {
+    if (!name || !email || !contact || !subject || !message) {
       Swal.fire({
         title: "Error",
         text: "Please fill all fields!",
@@ -32,10 +32,10 @@ const ContactForm = () => {
 
     try {
       await emailjs.sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_o3qyx2a",
+        "template_afhb2np",
         form.current,
-        "YOUR_PUBLIC_KEY"
+        "PcFzo5u8K7Higxmwf"
       );
 
       Swal.fire({
@@ -74,9 +74,9 @@ const ContactForm = () => {
           <hi className="text-4xl mb-12 text-gray-400 flex justify-center items-center">Get in touch with Me</hi>
           <form ref={form} onSubmit={sendEmail} className="flex flex-col w-full gap-4 p-8 rounded-lg">
           {[
-            { name: "user_name", type: "text", label: "Your Name" },
-            { name: "user_email", type: "email", label: "Your Email" },
-            { name: "user_contact", type: "text", label: "Your Contact" },
+            { name: "name", type: "text", label: "Your Name" },
+            { name: "email", type: "email", label: "Your Email" },
+            { name: "contact", type: "text", label: "Your Contact" },
             { name: "subject", type: "text", label: "Subject" },
           ].map((field) => (
             <div key={field.name} className="relative">
