@@ -63,7 +63,7 @@
   "main": "yes",
   "repository": {
     "type": "git",
-    "url": "my-portfolio"
+    "url": "Portfolio"
   },
   "keywords": [
     "portfolio"
