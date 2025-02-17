@@ -59,7 +59,7 @@ const ContactForm = () => {
         confirmButtonColor: "#FF4C4C",
       });
     } finally {
-      setIsLoading(true);
+      setIsLoading(false);
     }
   };
 
