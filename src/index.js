@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import PerformanceWrapper from "./PerformanceWrapper";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
 import "./input.css";
@@ -15,9 +14,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <PerformanceWrapper>
         <App />
-      </PerformanceWrapper>
     </BrowserRouter>
   </React.StrictMode>
 );
