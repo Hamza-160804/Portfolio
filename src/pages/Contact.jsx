@@ -38,14 +38,6 @@ const ContactForm = () => {
         "PcFzo5u8K7Higxmwf"
       );
 
-      await emailjs.send("service_o3qyx2a", "template_yubma48", {
-        to_email: email,
-        to_name: name,
-        from_name: "Hamza-1608",
-        message_subject: subject,
-        reply_time: "2 to 3 working days.",
-      });
-
       Swal.fire({
         title: "Success",
         text: "Your message has been sent!",
